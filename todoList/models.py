@@ -17,7 +17,6 @@ class ToDo(models.Model):
 	notes=models.TextField()
 	isStarred= models.BooleanField()
 	due_date=models.DateField(default=datetime.date.today)
-	completed=models.DateField()
 	created=models.DateTimeField(auto_now_add=True,editable=False)
 	category=models.ForeignKey(category,on_delete=models.CASCADE)
 	priority=models.ForeignKey(priority,on_delete=models.CASCADE)

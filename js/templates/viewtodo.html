@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>wasp</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://use.fontawesome.com/61793ed9a5.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="{% static 'view.js' %}"></script>
+</head>
+<body>
+
+	<div class="form-group p-3 rounded">        
+	<form name="form1">
+		 <fieldset>
+			<legend>To Do:</legend>
+				<label for="title">Title:</label>
+				<input type="text" class="form-control" id="title" placeholder="To Do Title..." disabled></input>
+				<label for="notes">Notes:</label>
+				<textarea class="form-control" id="notes" placeholder="Add Note..."></textarea>
+				<label for="duedate">Due Date:</label>
+				<input type="date" class="form-control" id="duedate"></input>
+				<label for="category">Category:</label>
+				<select id="category" size="1" class="form-control" >
+					<option value="0">-</option>
+					<option value="1">Groceries</option>
+					<option value="2">Movies to watch</option>
+					<option value="3">Travel</option>
+					<option value="4">Work</option>
+					<option value="5">Family</option>
+					<option value="6">Private</option>
+				</select>
+				<label for="priority">Priority:</label>
+				<select id="priority" size="1" class="form-control" >
+					<option value="0">-</option>
+					<option value="1">Low</option>
+					<option value="2">Medium</option>
+					<option value="3">High</option>
+				</select>
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="starred">
+					<label class="custom-control-label" for="starred"><i class='fa fa-star'></i></label>
+				</div>
+			<br>
+
+			<button id="btnPost" class="btn btn-primary">Update</button>
+			<button type="submit" id="btnDelete" class="btn btn-primary">Delete</button>
+	</form>
+	</div>
+    <br> 
+</body>
+</html>

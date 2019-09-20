@@ -29,7 +29,7 @@ def get_post_todo(request):
 	if request.method == 'GET':
 		todos=ToDo.objects.all()
 		serializer=ToDoSerializer(todos,many=True)
-		return Response(serializer.data)
+		return (Response(serializer.data))
 	if request.method == 'POST':
 		serializer=ToDoSerializer(data=request.data)
 		if serializer.is_valid():
